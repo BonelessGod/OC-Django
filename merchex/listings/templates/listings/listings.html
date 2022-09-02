@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Merchex | Litings</title>
+    </head>
+    
+
+<h1>Nos articles</h1> 
+        <p>Nous vendons des articles de merch !</p>
+        <ul>
+            {% for title in titles %}
+            <li>{{ title.name }}</li>
+            {% endfor %}
+        </ul>
+
+
+</html>
