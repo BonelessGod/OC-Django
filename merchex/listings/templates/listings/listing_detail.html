@@ -1,0 +1,27 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+
+<h2>{{ title.name }}</h2>
+
+<ul>
+    <li>
+        Type: {{ title.type }}
+    </li>
+    <li>
+        Année de sortie: {{ title.year}}
+    </li>
+    <li>
+        Groupe/Artiste: {{ title.band }}
+    </li>
+</ul>
+
+<p>
+    {{title.description}}
+</p>
+
+<a href={% url 'listing-list' %}>Retour à la liste</a>
+
+{% endblock %}
+
+

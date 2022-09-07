@@ -3,7 +3,7 @@
 
 {% block content %}
 
-    <h1>Hello Django!</h1>
+    <h1>Groupes</h1>
 
     <p>Mes groupes préférés sont :</p>
 
@@ -12,7 +12,7 @@
         {% for band in bands %}
 
             <li>
-                {{ band.name }}
+                <a href="{% url 'band-detail' band.id %}">{{ band.name }}</a>
             </li>
 
         {% endfor %}

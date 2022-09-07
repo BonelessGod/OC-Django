@@ -7,7 +7,11 @@
         <p>Nous vendons des articles de merch !</p>
         <ul>
             {% for title in titles %}
-            <li>{{ title.name }}</li>
+
+            <li>
+                <a href="{% url 'listing-detail' title.id %}">
+                    {{ title.name }}</li>
+                </a>
             {% endfor %}
         </ul>
 
