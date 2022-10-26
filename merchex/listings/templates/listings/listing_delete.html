@@ -1,0 +1,17 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+
+<h1>Suppression de l'article</h1>
+
+<p>Êtes-vous sûr de vouloir supprimer {{ title.name }} ?</p>
+
+<form action="" method="post">
+
+{% csrf_token %}
+
+<input type="submit" value="Oui, je suis sûr" />
+
+</form>
+
+{% endblock %}

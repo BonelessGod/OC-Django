@@ -20,6 +20,9 @@
     {{title.description}}
 </p>
 
+
+<a href="{% url 'listing-edit' title.id %}">Modifier</a>
+<a href="{% url 'listing-delete' title.id %}">Supprimer</a>
 <a href={% url 'listing-list' %}>Retour à la liste</a>
 
 {% endblock %}

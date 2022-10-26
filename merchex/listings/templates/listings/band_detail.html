@@ -32,6 +32,9 @@
 
     {% comment %} {% for title in band.listing_set.all %} {% endcomment %}
 
+
+    <a href="{% url 'band-edit' band.id %}">Modifier</a>
+    <a href="{% url 'band-delete' band.id %}">Supprimer</a>
     <a href="{% url 'band-list' %}">Retour à la liste</a>
 
 {% endblock %}

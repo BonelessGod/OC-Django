@@ -1,5 +1,5 @@
 from django import forms
-from listings.models import Band
+from listings.models import Band, Title
 
 class ContactUsForm(forms.Form):
     name = forms.CharField(max_length=100)
@@ -9,4 +9,9 @@ class ContactUsForm(forms.Form):
 class BandForm(forms.ModelForm):
     class Meta:
         model = Band
-        fields = '__all__'
+        exclude = ('active', 'official_website')
+
+class TitleForm(forms.ModelForm):
+    class Meta:
+        model = Title
+        exclude = ('sold',)
